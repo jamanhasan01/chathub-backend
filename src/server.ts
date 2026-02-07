@@ -15,7 +15,7 @@ import { app, io, server } from './utils/socket'
 
 dotenv.config()
 
-/* =============================== CORS CONFIG ================================ */
+/* =============================== CORS CONFIGg ================================ */
 app.use(
   cors({
     origin: ['https://chathub-frontend-beta.vercel.app','http://localhost:5173'],
