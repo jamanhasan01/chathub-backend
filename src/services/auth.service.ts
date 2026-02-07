@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt'
 
-import User from '../models/User.model.js'
+import User from '../models/User.model'
 
 /* =============================== resgister User Service ================================ */
 export const registerUserService = async (

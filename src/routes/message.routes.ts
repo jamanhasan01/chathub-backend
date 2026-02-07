@@ -1,7 +1,7 @@
 import { Router } from 'express'
 
-import { verifyToken } from '../middlewares/auth.middleware.js'
-import { chatMessage, messages } from '../controllers/message.controller.js'
+import { verifyToken } from '../middlewares/auth.middleware'
+import { chatMessage, messages } from '../controllers/message.controller'
 
 const router = Router()
 router.post('/message', verifyToken, chatMessage)

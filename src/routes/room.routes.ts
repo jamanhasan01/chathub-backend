@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { createRoom } from '../controllers/room.controller.js'
-import { verifyToken } from '../middlewares/auth.middleware.js'
+import { createRoom } from '../controllers/room.controller'
+import { verifyToken } from '../middlewares/auth.middleware'
 
 const router = Router()
 router.post('/room', verifyToken, createRoom)
