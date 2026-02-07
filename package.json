@@ -1,7 +1,6 @@
 {
   "name": "chathub-backend",
   "version": "1.0.0",
-
   "scripts": {
     "dev": "nodemon --exec ts-node src/server.ts",
     "build": "tsc",
