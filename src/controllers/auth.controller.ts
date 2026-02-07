@@ -52,9 +52,9 @@ export const loginUser = async (req: Request, res: Response, next: NextFunction)
     /* =============================== set cookie ================================ */
     res.cookie('accessToken', token, {
       httpOnly: true,
-      secure: false, // REQUIRED for SameSite=None
-      sameSite: 'lax',
-      path: '/', // REQUIRED for cross-origin
+      secure: process.env.NODE_ENV === 'production', // ✅ MUST be true in prod
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // ✅
+      path: '/',
       maxAge: 7 * 24 * 60 * 60 * 1000,
     })
 
